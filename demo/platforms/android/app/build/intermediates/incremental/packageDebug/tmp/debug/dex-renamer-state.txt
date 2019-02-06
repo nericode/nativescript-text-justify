@@ -1,0 +1,4 @@
+#Tue Feb 05 23:46:05 CST 2019
+base.0=/Users/alan/Documents/Nativescript/plugins/text-justify/demo/platforms/android/app/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex

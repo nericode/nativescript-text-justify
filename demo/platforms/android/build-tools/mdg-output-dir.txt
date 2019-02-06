@@ -1,0 +1,1 @@
+/Users/alan/Documents/Nativescript/plugins/text-justify/demo/platforms/android/app/src/main/assets/metadata

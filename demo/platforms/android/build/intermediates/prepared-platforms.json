@@ -1,0 +1,8 @@
+{
+    "nativescript-text-justify": true,
+    "nativescript-theme-core": true,
+    "nativescript-unit-test-runner": true,
+    "tns-core-modules": true,
+    "tns-core-modules-widgets": true,
+    "tslib": true
+}
