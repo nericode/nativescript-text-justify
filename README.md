@@ -16,11 +16,13 @@ Describe any usage specifics for your plugin. Give examples for Android, iOS, An
 ## API
 
 Describe your plugin methods and properties here. See [nativescript-feedback](https://github.com/EddyVerbruggen/nativescript-feedback) for example.
-  
-| Property | Default | Description |
-| --- | --- | --- |
-| some property | property default value | property description, default values, etc.. |
-| another property | property default value | property description, default values, etc.. |
+
+| Property      | Default                | Description                                   |
+| ------------- | ---------------------- | --------------------------------------------- |
+| text          | text: string           | Set the text                                  |
+| textAlignment | textAlignment: boolean | Set true for justified or false               |
+| textSize      | textSize: number       | Set textSize 1 and <= 23                      |
+| textColor     | textColor: string      | Set textColor #RRGGBB 'white', 'black', etc.. |
 
 ## License
 
