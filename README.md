@@ -10,8 +10,21 @@ tns plugin add nativescript-text-justify
 
 ## Usage
 
-Describe any usage specifics for your plugin. Give examples for Android, iOS, Angular if needed. See [nativescript-drop-down](https://www.npmjs.com/package/nativescript-drop-down) for example.
-`javascript Usage code snippets here`)
+```xml
+<Page
+    xmlns="http://schemas.nativescript.org/tns.xsd"
+    xmlns:textJustify="nativescript-text-justify"
+    loaded="pageLoaded">
+    <StackLayout>
+        <textJustify:TextJustify
+            textColor="black"
+            textSize="22"
+            textAlignment="true"
+            text="This text is for test, This text is for test, This text is for test, This text is for test.">
+        </textJustify:TextJustify>
+    </StackLayout>
+</Page>
+```
 
 ## API
 

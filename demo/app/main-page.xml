@@ -8,7 +8,7 @@
       textColor="black" 
       textSize="22" 
       textAlignment="true" 
-      text="LLorem Ipsum. LLorem Ipsum. LLorem Ipsum. LLorem Ipsum.LLorem Ipsum.">
+      text="This text is for test, This text is for test, This text is for test, This text is for test.">
     </textJustify:TextJustify>
     </StackLayout>
   </ScrollView>
