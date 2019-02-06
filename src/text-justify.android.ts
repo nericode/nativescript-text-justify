@@ -45,9 +45,15 @@ export class TextJustify extends TextJustifyCommon {
     }
 
     public createNativeView() {
-        return new DocumentView(
+        this.nativeView = new DocumentView(
             this._context,
             DocumentView.PLAIN_TEXT
         );
+
+        this.nativeView.setCacheConfig(
+            DocumentView.CacheConfig.NO_CACHE
+        );
+
+        return this.nativeView;
     }
 }
