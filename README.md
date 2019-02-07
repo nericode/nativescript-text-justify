@@ -10,6 +10,12 @@ tns plugin add nativescript-text-justify
 
 ## Usage
 
+To establish a font type, it is necessary to create a font with the fonts to be used:
+
+Directory:
+
+`App_Resources > Android > src > main > <create paths> assets > fonts > <name>.ttf`
+
 ```xml
 <Page
     xmlns="http://schemas.nativescript.org/tns.xsd"
@@ -20,6 +26,7 @@ tns plugin add nativescript-text-justify
             textColor="black"
             textSize="22"
             textAlignment="true"
+            textTypefacePath="robotoitalic.ttf"
             text="This text is for test, This text is for test, This text is for test, This text is for test.">
         </textJustify:TextJustify>
     </StackLayout>
@@ -44,6 +51,7 @@ In .html:
     textColor="black"
     textSize="22"
     textAlignment="true"
+    textTypefacePath="robotoitalic.ttf"
     text="This text is for test, This text is for test, This text is for test, This text is for test."
 >
 </TextJustify>
@@ -53,12 +61,13 @@ In .html:
 
 Describe your plugin methods and properties here. See [nativescript-feedback](https://github.com/EddyVerbruggen/nativescript-feedback) for example.
 
-| Property      | Default                | Description                                   |
-| ------------- | ---------------------- | --------------------------------------------- |
-| text          | text: string           | Set the text                                  |
-| textAlignment | textAlignment: boolean | Set true for justified or false               |
-| textSize      | textSize: number       | Set textSize 1 and <= 23                      |
-| textColor     | textColor: string      | Set textColor #RRGGBB 'white', 'black', etc.. |
+| Property         | Default                  | Description                                   |
+| ---------------- | ------------------------ | --------------------------------------------- |
+| text             | text: string             | Set the text                                  |
+| textAlignment    | textAlignment: boolean   | Set true for justified or false               |
+| textSize         | textSize: number         | Set textSize 1 and <= 23                      |
+| textColor        | textColor: string        | Set textColor #RRGGBB 'white', 'black', etc.. |
+| textTypefacePath | textTypefacePath: string | Set textTypefacePath example: roboto.ttf      |
 
 ## License
 
