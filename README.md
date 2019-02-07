@@ -16,6 +16,8 @@ Directory:
 
 `App_Resources > Android > src > main > <create paths> assets > fonts > <name>.ttf`
 
+Show demo for more info.
+
 ```xml
 <Page
     xmlns="http://schemas.nativescript.org/tns.xsd"
