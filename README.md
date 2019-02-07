@@ -10,7 +10,7 @@ tns plugin add nativescript-text-justify
 
 ## Usage
 
-To establish a font type, it is necessary to create a font with the fonts to be used:
+To establish a font type, it is necessary to create a directory `assets > fonts` with the fonts to be used:
 
 Directory:
 
