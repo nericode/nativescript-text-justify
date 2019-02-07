@@ -25,14 +25,19 @@ export class TextJustifyCommon extends ContentView {
     textAlignment: boolean;
 
     /**
-     * Gets or set the text font size of the DocumentView.
+     * Gets or set the text of the DocumentView.
      */
     textSize: number;
 
     /**
-     * Gets or set the color font size of the DocumentView.
+     * Gets or set the color of the DocumentView.
      */
     textColor: string;
+
+    /**
+     * Gets or set the text family of the DocumentView.
+     */
+    textTypefacePath: string;
 }
 
 export const textAlignmentProperty = new Property<
@@ -67,3 +72,12 @@ export const textColorProperty = new Property<
     valueConverter: value => value
 });
 textColorProperty.register(TextJustifyCommon);
+
+export const textTypefacePathProperty = new Property<
+    TextJustifyCommon,
+    string
+>({
+    name: "textTypefacePath",
+    valueConverter: value => value
+});
+textTypefacePathProperty.register(TextJustifyCommon);

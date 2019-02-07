@@ -4,10 +4,14 @@
   class="page">
   <ScrollView class="p-20">
    <StackLayout>
+    <Label text="This text is for test, This text is for test" fontSize="18" />
+      <Label text="___________________________________________" fontSize="20" />
+
     <textJustify:TextJustify 
-      textColor="black" 
-      textSize="22" 
+      textColor="gray" 
+      textSize="18" 
       textAlignment="true" 
+      textTypefacePath="robotoitalic.ttf"
       text="This text is for test, This text is for test, This text is for test, This text is for test.">
     </textJustify:TextJustify>
     </StackLayout>

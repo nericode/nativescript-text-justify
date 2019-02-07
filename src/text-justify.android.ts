@@ -3,7 +3,8 @@ import {
     textProperty,
     textAlignmentProperty,
     fontSizeProperty,
-    textColorProperty
+    textColorProperty,
+    textTypefacePathProperty
 } from "./text-justify.common";
 
 declare const com: any;
@@ -12,6 +13,7 @@ const DocumentView = com.bluejamesbond.text.DocumentView;
 const TextAlignment = com.bluejamesbond.text.style.TextAlignment;
 const TypedValue = android.util.TypedValue;
 const Color = android.graphics.Color;
+const Typeface = android.graphics.Typeface;
 
 export class TextJustify extends TextJustifyCommon {
     public nativeView;
@@ -44,6 +46,12 @@ export class TextJustify extends TextJustifyCommon {
             .setTextColor(Color.parseColor(value));
     }
 
+    [textTypefacePathProperty.setNative](value: string) {
+        this.nativeView
+            .getDocumentLayoutParams()
+            .setTextTypeface(this.getFont(this._context, value));
+    }
+
     public createNativeView() {
         this.nativeView = new DocumentView(
             this._context,
@@ -54,6 +62,19 @@ export class TextJustify extends TextJustifyCommon {
             DocumentView.CacheConfig.NO_CACHE
         );
 
+        this.nativeView
+            .getDocumentLayoutParams()
+            .setTextTypeface(
+                this.getFont(this._context, "robotolight.ttf")
+            );
+
         return this.nativeView;
+    }
+
+    public getFont(context, value) {
+        return Typeface.createFromAsset(
+            context.getAssets(),
+            "fonts/" + value
+        );
     }
 }
