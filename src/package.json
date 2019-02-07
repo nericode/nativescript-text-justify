@@ -1,7 +1,7 @@
 {
     "name": "nativescript-text-justify",
-    "version": "1.0.1",
-    "description": "Your awesome NativeScript plugin.",
+    "version": "1.1.0",
+    "description": "Text Justify",
     "main": "text-justify",
     "typings": "index.d.ts",
     "nativescript": {
@@ -34,8 +34,8 @@
         "iOS"
     ],
     "author": {
-        "name": "Your Name",
-        "email": "youremail@yourdomain.com"
+        "name": "Alan Neri",
+        "email": "developers@waisoft.com.mx"
     },
     "bugs": {
         "url": "https://github.com/nericodec/nativescript-text-justify/issues"
