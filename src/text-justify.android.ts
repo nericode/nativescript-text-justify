@@ -65,7 +65,7 @@ export class TextJustify extends TextJustifyCommon {
         this.nativeView
             .getDocumentLayoutParams()
             .setTextTypeface(
-                this.getFont(this._context, "robotolight.ttf")
+                this.getFont(this._context, "roboto.ttf")
             );
 
         return this.nativeView;
