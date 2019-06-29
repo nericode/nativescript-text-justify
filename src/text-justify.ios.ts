@@ -23,14 +23,6 @@ export class TextJustify extends Label implements TextJustifyCommon {
         this.nativeView.text = value;
     }
 
-    // [fontSizeProperty.setNative](value: number) {
-    //     this.nativeView.fontSize = value;
-    // }
-
-    // [colorProperty.setNative](value: string) {
-    //     this.nativeView.color = new Color(value);
-    // }
-
     public initNativeView() {
         (<any>this.nativeView).owner = this;
         super.initNativeView();
