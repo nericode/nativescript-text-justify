@@ -10,7 +10,7 @@ tns plugin add nativescript-text-justify
 
 ## Usage
 
-## Only Android
+### Only Android
 
 To establish a font type, it is necessary to create a directory `assets > fonts` with the fonts to be used:
 Directory:
