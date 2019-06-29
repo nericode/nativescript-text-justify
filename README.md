@@ -63,13 +63,20 @@ In .html:
 
 Describe your plugin methods and properties here. See [nativescript-feedback](https://github.com/EddyVerbruggen/nativescript-feedback) for example.
 
-| Property         | Default                  | Description                                   |
-| ---------------- | ------------------------ | --------------------------------------------- |
-| text             | text: string             | Set the text                                  |
-| textAlignment    | textAlignment: boolean   | Set true for justified or false               |
-| textSize         | textSize: number         | Set textSize 1 and <= 23                      |
-| textColor        | textColor: string        | Set textColor #RRGGBB 'white', 'black', etc.. |
-| textTypefacePath | textTypefacePath: string | Set textTypefacePath example: roboto.ttf      |
+| Property (Android) | Default                  | Description                                   |
+| ------------------ | ------------------------ | --------------------------------------------- |
+| text               | text: string             | Set the text                                  |
+| alignment          | alignment: boolean       | Set true for justified or false               |
+| textSize           | textSize: number         | Set textSize 1 and <= 23                      |
+| textColor          | textColor: string        | Set textColor #RRGGBB 'white', 'black', etc.. |
+| textTypefacePath   | textTypefacePath: string | Set textTypefacePath example: roboto.ttf      |
+| Property (iOS)     | Default                  | Description                                   |
+| ----------------   | ------------------------ | --------------------------------------------- |
+| text               | text: string             | Set the text                                  |
+| alignment          | alignment: boolean       | Set true for justified or false               |
+| color              | color: string            | Set textColor #RRGGBB 'white', 'black', etc.. |
+| textWrap           | textWrap: boolean        | Property of Label                             |
+| fontSize           | fontSize: number         | Property of Label                             |
 
 ## License
 
