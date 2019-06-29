@@ -5,10 +5,11 @@
   <ScrollView class="p-20">
    <StackLayout>
     <Label text="This text is for test, This text is for test" fontSize="18" />
-      <Label text="___________________________________________" fontSize="20" />
 
     <textJustify:TextJustify 
       color="red" 
+      textColor="gray"
+      textSize="22"
       fontSize="22" 
       aligment="true" 
       textWrap="true"

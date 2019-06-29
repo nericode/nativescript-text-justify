@@ -3,7 +3,7 @@ import {
     alignmentProperty,
     textProperty
 } from "./text-justify.common";
-import { Property, colorProperty } from "tns-core-modules/ui/core/view";
+import { Property } from "tns-core-modules/ui/core/view";
 
 // Android Only properties
 export const textSizeProperty = new Property<TextJustifyCommon, number>({
@@ -55,7 +55,7 @@ export class TextJustify extends TextJustifyCommon {
             .setTextSize(TypedValue.COMPLEX_UNIT_SP, value);
     }
 
-    [colorProperty.setNative](value: string) {
+    [textColorProperty.setNative](value: string) {
         this.nativeView
             .getDocumentLayoutParams()
             .setTextColor(Color.parseColor(value));
