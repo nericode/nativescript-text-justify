@@ -1,9 +1,9 @@
 import {
     TextJustifyCommon,
     textProperty,
-    textAlignmentProperty,
+    alignmentProperty,
     fontSizeProperty,
-    textColorProperty,
+    colorProperty,
     textTypefacePathProperty
 } from "./text-justify.common";
 
@@ -18,12 +18,8 @@ const Typeface = android.graphics.Typeface;
 export class TextJustify extends TextJustifyCommon {
     public nativeView;
 
-    get android(): any {
-        return this.nativeView;
-    }
-
-    [textAlignmentProperty.setNative](value: boolean) {
-        if (value) {
+    [alignmentProperty.setNative](value: string) {
+        if (value === "true") {
             this.nativeView
                 .getDocumentLayoutParams()
                 .setTextAlignment(TextAlignment.JUSTIFIED);
@@ -40,7 +36,7 @@ export class TextJustify extends TextJustifyCommon {
             .setTextSize(TypedValue.COMPLEX_UNIT_SP, value);
     }
 
-    [textColorProperty.setNative](value: string) {
+    [colorProperty.setNative](value: string) {
         this.nativeView
             .getDocumentLayoutParams()
             .setTextColor(Color.parseColor(value));
@@ -58,23 +54,16 @@ export class TextJustify extends TextJustifyCommon {
             DocumentView.PLAIN_TEXT
         );
 
-        this.nativeView.setCacheConfig(
-            DocumentView.CacheConfig.NO_CACHE
-        );
+        this.nativeView.setCacheConfig(DocumentView.CacheConfig.NO_CACHE);
 
         this.nativeView
             .getDocumentLayoutParams()
-            .setTextTypeface(
-                this.getFont(this._context, "roboto.ttf")
-            );
+            .setTextTypeface(this.getFont(this._context, "roboto.ttf"));
 
         return this.nativeView;
     }
 
     public getFont(context, value) {
-        return Typeface.createFromAsset(
-            context.getAssets(),
-            "fonts/" + value
-        );
+        return Typeface.createFromAsset(context.getAssets(), "fonts/" + value);
     }
 }

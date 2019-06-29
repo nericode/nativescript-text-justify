@@ -8,10 +8,11 @@
       <Label text="___________________________________________" fontSize="20" />
 
     <textJustify:TextJustify 
-      textColor="gray" 
-      textSize="18" 
-      textAlignment="true" 
-      text="This text is for test, This text is for test, This text is for test, This text is for test.">
+      color="blue" 
+      fontSize="35" 
+      aligment="true" 
+      textWrap="true"
+      text="This text is for test, This text is for test, This text is for test, This text is for test. This text is for test, This text is for test, This text is for test, This text is for test This text is for test, This text is for test, This text is for test, This text is for test">
     </textJustify:TextJustify>
     </StackLayout>
   </ScrollView>
