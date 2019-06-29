@@ -1,16 +1,19 @@
-import { Property } from "tns-core-modules/ui/content-view";
-import { Label } from "tns-core-modules/ui/label/label";
+import { Property, View } from "tns-core-modules/ui/content-view";
+import { TextJustify as TextJustifyDefinition } from "./index";
 
-export class TextJustifyCommon extends Label {
+export class TextJustifyCommon extends View implements TextJustifyDefinition {
     /**
-     * Gets or set the text alignment of the DocumentView.
+     * Common
      */
+    text: string;
     aligment: string;
 
     /**
-     * Gets or set the text family of the DocumentView.
+     * Android Only
      */
     textTypefacePath: string;
+    textSize: number;
+    textColor: string;
 }
 
 export const alignmentProperty = new Property<TextJustifyCommon, string>({
@@ -24,23 +27,3 @@ export const textProperty = new Property<TextJustifyCommon, string>({
     valueConverter: value => value
 });
 textProperty.register(TextJustifyCommon);
-
-export const fontSizeProperty = new Property<TextJustifyCommon, number>({
-    name: "fontSize",
-    valueConverter: value => +value
-});
-fontSizeProperty.register(TextJustifyCommon);
-
-export const colorProperty = new Property<TextJustifyCommon, string>({
-    name: "color",
-    valueConverter: value => value
-});
-colorProperty.register(TextJustifyCommon);
-
-export const textTypefacePathProperty = new Property<TextJustifyCommon, string>(
-    {
-        name: "textTypefacePath",
-        valueConverter: value => value
-    }
-);
-textTypefacePathProperty.register(TextJustifyCommon);

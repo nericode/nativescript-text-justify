@@ -1,11 +1,30 @@
 import {
     TextJustifyCommon,
-    textProperty,
     alignmentProperty,
-    fontSizeProperty,
-    colorProperty,
-    textTypefacePathProperty
+    textProperty
 } from "./text-justify.common";
+import { Property, colorProperty } from "tns-core-modules/ui/core/view";
+
+// Android Only properties
+export const textSizeProperty = new Property<TextJustifyCommon, number>({
+    name: "textSize",
+    valueConverter: value => +value
+});
+textSizeProperty.register(TextJustifyCommon);
+
+export const textColorProperty = new Property<TextJustifyCommon, string>({
+    name: "textColor",
+    valueConverter: value => value
+});
+textColorProperty.register(TextJustifyCommon);
+
+export const textTypefacePathProperty = new Property<TextJustifyCommon, string>(
+    {
+        name: "textTypefacePath",
+        valueConverter: value => value
+    }
+);
+textTypefacePathProperty.register(TextJustifyCommon);
 
 declare const com: any;
 
@@ -30,7 +49,7 @@ export class TextJustify extends TextJustifyCommon {
         this.nativeView.getLayout().setText(value);
     }
 
-    [fontSizeProperty.setNative](value: number) {
+    [textSizeProperty.setNative](value: number) {
         this.nativeView
             .getDocumentLayoutParams()
             .setTextSize(TypedValue.COMPLEX_UNIT_SP, value);

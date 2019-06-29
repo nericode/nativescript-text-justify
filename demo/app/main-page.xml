@@ -8,8 +8,8 @@
       <Label text="___________________________________________" fontSize="20" />
 
     <textJustify:TextJustify 
-      color="blue" 
-      fontSize="35" 
+      color="red" 
+      fontSize="22" 
       aligment="true" 
       textWrap="true"
       text="This text is for test, This text is for test, This text is for test, This text is for test. This text is for test, This text is for test, This text is for test, This text is for test This text is for test, This text is for test, This text is for test, This text is for test">
